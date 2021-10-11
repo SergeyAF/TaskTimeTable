@@ -23,6 +23,18 @@ module.exports = {
         use: ['ts-loader'],
       },
       {
+        test: [/\svg.$/, /\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/',
+            }
+          }
+        ]
+      },
+      {
         test: /\.(s*)css$/,
         use: [
           'style-loader',
@@ -36,9 +48,9 @@ module.exports = {
               },
             },
           },
-          'sass-loader'
-        ]
-      }
+          'sass-loader',
+        ],
+      },
     ],
   },
   plugins: [

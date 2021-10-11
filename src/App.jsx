@@ -1,9 +1,9 @@
 import React from 'react';
 
-import s from './App.css'
+import './App.scss';
 
 const App = () => {
-  return <div className={s.header}>Basic worked config</div>;
+  return <div className='header'>Basic worked config</div>;
 };
 
 export default App;
