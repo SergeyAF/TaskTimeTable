@@ -21,6 +21,7 @@ module.exports = {
       {
         test: /\.[tj]sx?$/,
         use: ['ts-loader'],
+        exclude: /.eslintrc.js/,
       },
       {
         test: [/\svg.$/, /\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
