@@ -7,7 +7,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
   mode: NODE_ENV ? NODE_ENV : 'development',
-  entry: path.resolve(__dirname, 'src/index.jsx'),
+  entry: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -24,7 +24,9 @@ module.exports = {
         exclude: /.eslintrc.js/,
       },
       {
-        test: [/\svg.$/, /\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        test: [
+          /\svg.$/, /\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/
+        ],
         use: [
           {
             loader: 'file-loader',
